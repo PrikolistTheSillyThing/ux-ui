@@ -1,0 +1,54 @@
+.widget {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 1em;
+    color: white;
+    border-bottom: 1px solid red;
+}
+.widget .brand {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.5em;
+    margin-right: -4px;
+
+    /* border: 1px solid green; */
+}
+.widget .brand img {
+    height: 7em;
+    margin-bottom: -4px;
+    margin-right: -4px;
+}
+.widget .info {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 0.5em;
+    font-size: 0.75em;
+    width: calc(100% - 1.28 * ( 7em + 3 * 0.5em) );
+
+    /* border: 1px solid yellow; */
+}
+.widget .info h2 {
+    padding-bottom: 0.2em;
+}
+.widget .info p {
+    padding-bottom: 1em;
+}
+.widget .info button {
+    background-clip: content-box;
+    border: none;
+    padding: 0.5em;
+    border-radius: 2em;
+    line-height: 1.7em;
+}
+.widget .info button::before {
+    content: "x";
+    opacity: 0;
+}
+.widget .info button::after {
+    content: "x";
+    opacity: 0;
+}
+.widget .info h2,
+.widget .info p {
+    margin: 0;
+}
