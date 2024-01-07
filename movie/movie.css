@@ -1,0 +1,83 @@
+body {
+    background-image: linear-gradient(to left, #989, #189 );
+    background-size: cover;
+    background-position: center;
+    --size: 40vh;
+    --count: 7;
+    --top-marker: calc(var(--size) * 0.75 * 0.04);
+    --bottom-marker: calc(var(--size) * 0.75 * 0.96);
+
+}
+.movies {
+    width: var(--size);
+    height: var(--size);
+    background-image: linear-gradient(-45deg, #1289, #8219);
+
+    margin-top: 
+        calc( (100vh - var(--size) ) / 2 );
+    margin-left: 
+        calc( 100vw / 3 - var(--size) / 2);
+        border-radius: 100%;
+}
+.movies .film {
+    /* background-color: #333; */
+    height: calc(var(--size) * 0.75 );
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* ЧЕРЕЗ ОТРИЦАТЕЛЬНЫЙ MARGIN: 
+        margin-left: calc( -1 * (100vw / 3 - var(--size) / 2 ) );
+        margin-right: calc( -1 * ( (100vw / 3) * 2 - var(--size) / 2 ) ); 
+    */
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+
+    width: calc( var(--count) *    ( (var(--size) * 0.75 * 0.92) * 4 / 3 + 1vh)  );
+
+    background-image: 
+        linear-gradient(transparent, transparent var(--top-marker),#1239 var(--top-marker),#1239 var(--bottom-marker), transparent var(--bottom-marker)),
+        radial-gradient(transparent 50%, #1239 50%),
+        radial-gradient(transparent 50%, #7219 50%);
+    background-size: 
+        cover,
+        var(--top-marker) var(--top-marker),
+        var(--top-marker) var(--top-marker);
+    background-repeat: 
+        repeat,
+        repeat-x,
+        repeat-x;    
+    background-position: 
+        top left,
+        top left,
+        bottom left;
+    filter: drop-shadow(2px 2px 6px black);
+}
+    
+.movies .film img {
+    /* display: none; */
+    position: relative;
+    top: calc(var(--size) * 0.75 * 0.04);
+    height: calc(var(--size) * 0.75 * 0.92);
+    margin: 0 0.5vh;
+}
+.movies .controls {
+    background-image: linear-gradient(45deg, #1289, #8219);
+    position: absolute;
+    height: calc(var(--size) * 0.8 );
+    width: calc(var(--size) * 0.8 );
+    margin-top: calc( (var(--size) * 0.8 ) * 0.125 );
+    margin-left: calc( (var(--size) * 0.8 ) * 0.125 );
+    text-align: center;
+    border-radius: 100%;
+    filter: drop-shadow(2px 2px 6px black);
+
+}
+.movies .controls button{
+    line-height: calc( (var(--size) * 0.8 ) );
+    font-size: calc( (var(--size) * 0.2 ) );
+    color: white;
+    background: none;
+    border: none;
+}
