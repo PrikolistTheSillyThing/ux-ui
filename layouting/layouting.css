@@ -1,0 +1,51 @@
+body {
+    font-family: poppins;
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+.container {
+    text-align: center;
+    vertical-align: top;
+    margin-top: 10vh;
+}
+.container img {
+    margin-right: 5vw;
+}
+.container h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+.container h2 {
+    margin: 0;  
+}
+.container p {
+    font-size: 0.8rem;
+}
+.container .faq-skills p {
+    width: 70%;
+}
+.container h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    display: inline-block;
+}
+.container form{
+    display: inline-block;
+    text-align: left;
+    width: 36vw;
+    vertical-align: top;
+}
+.btn-download::after {
+    content: "\f019";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.list-skills li::before {
+    content: "\f111";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
