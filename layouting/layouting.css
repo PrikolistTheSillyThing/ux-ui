@@ -1,68 +1,506 @@
 body {
     font-family: poppins;
     margin: 0;
+    --pinkL: #F2059F;
+    --pinkM: #f2059f;
+    --magenta: #690eb1;
+    --dark: #08203a;
+    --light:#d2dee9;
+    --greyB:#7888a2;
+    --greyBA:#7888a270;
+    --grey:#666666;
+    --white: white;
+    --orange: rgb(255, 166, 0);
+
+    --transition-duration: 0.3s;
+    background-color: var(--light);
 }
 ul {
     list-style: none;
     padding: 0;
-    margin: 2rem 0;
 }
-ul h3{
-    display: inline-block;
+
+h1,h2,h3 {
+    color: var(--dark);
+}
+
+.btn-d {
+    background-image: linear-gradient(
+        38deg, var(--pinkL), var(--magenta)
+        );
+    color: var(--dark);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0em 0em 0.5em -0.2em var(--greyB);
+}
+.btn-d span {
+    position: relative;
+}
+.btn-d::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    transition: var(--transition-duration);
+}
+.btn-d:hover {
+    box-shadow: 0.1em 0.1em 0.5em 0em var(--greyB);
+}
+.btn-d:hover::before {
+    left: 0;
+}
+.btn-l {
+    color: var(--dark);
+    background-image: 
+        linear-gradient(
+            90deg, var(--light), white
+        ),
+        linear-gradient(
+            38deg, var(--pinkL), var(--magenta)
+        );
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    box-shadow: 0.1em 0.1em 0.5em 0em var(--greyB);
+    transition: var(--transition-duration);
+}
+.btn-l:hover {
+    background-position:
+        250px 0,
+        0 0;
+    color: white;
 }
 .btn-download::after {
     content: "\f019";
     font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+    font-weight: 600;
 }
-.list-skills li::before {
+.about form ul li::before {
     content: "\f111";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
+}
+.vtext {
+    font-size: 11rem;
+    color: var(--light);
+    text-shadow: 0.035em 0.035em 0.01em rgb(202, 213, 216), -0.035em -0.035em 0.01em rgb(221, 230, 233);
+    position: absolute;
+    top: 0;
+    transform: translateX(-70%) rotate(-90deg);
 }
 .about {
     border: 3px solid blue;
 
     padding: 5rem 0;
 }
-.container {
-    width: 1400px;
-    margin: 0 auto;
-    /* border: 1px solid black; */
-}
-.container::after {
+
+/* .container::after {
     content: "";
     display: block;
     clear: both;
-}
+} */
 .about img {
-    float: left;
+    /* float: left;
     width: 45%;
-    margin-top: -14.5rem;
+    margin-top: -14.5rem; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 .about h1 {
+    margin: 0;
     font-size: 3.5rem;
     line-height: 1.1em;
-    transform: translateY(4.5rem);
-    margin-bottom: 0;
+    transform: translateY(3.5rem);
 }
 .about h2 {
-    margin-left: 50%;
-    font-size: 1.5rem;
     font-weight: 600;
-    transform: translateY(-8rem);
+    font-size: 1.5rem;
+    transform: translateY(-9rem);
 }
-.container>p {
+/* .container>p {
     margin: 2rem 0;
-}
+} */
 .about h1,
 .about h2,
-.about p,
+.about .container > p,
 .about form {
-    width: 45%;
+    /* width: 45%; */
     /* border: 1px solid black; */
-    float: right;
+    /* float: right; */
+    margin-left: 50%;
 }
 .about form p {
     float: none;
 }
+
+
+.about form ul,
+.about form input[type="radio"] {
+     display: none; 
+}
+.about form #check-skills:checked ~ .list-skills {
+    display: block;
+}
+.about form #check-awards:checked ~ .list-awards {
+    display: block;
+}
+.about form #check-education:checked ~ .list-education {
+    display: block;
+}
+
+.about form ul li h3 {
+    display: inline-block;
+    margin: 0.5em 0 0.25em 0.5em;   
+    font-size: 1.1rem;
+}
+.about form ul li p {
+    margin: 0.125em 0 0.125em 1.6em;
+}
+
+.btn {
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+} 
+.about {
+    display: none;
+}
+.section-gradient {
+    background-image: linear-gradient(-90deg,white,transparent);
+}
+.navbar {
+    height: 5rem;
+    background-color: #333;
+}
+.header {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.header h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.0em;
+    margin: 0;
+}
+.header h1 strong {
+    font-weight: 800;
+    color: var(--pinkM);
+}
+.header h1 strong:not(:first-child){
+    display: none;
+}
+.header h2 {
+    font-size: 1.9rem;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+.header h3{
+    font-size: 1.1rem;
+    order: -1;
+    margin: 0;
+    margin-bottom: 2em;
+}
+header p {
+    color: var(--greyB);
+}
+.header .avatar {
+    width: 100%;
+}
+.header .actions a{
+    display: block;
+    text-decoration: none;
+    padding: 0.5em 0.75em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+.header .socials {
+    position: absolute;
+    top: 2em;
+    right:0;
+    background-image: linear-gradient(-90deg,white, var(--light));
+    box-shadow: 0.1em 0.1em 0.5em rgb(202, 213, 216);
+    padding: 0.7em;
+
+}
+.header .socials li {
+    display: inline-block;
+    border: 1px solid var(--greyB);
+    border-radius: 36px;
+    padding: 0.5em;
+    margin: 0 0.3em;
+
+}
+.header .socials a{
+    display: inline-block;
+    line-height: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+    width: 1em;
+    color: var(--dark);
+    font-size: 2rem;
+   
+}
+.header .skills {
+    /* position: absolute;
+    bottom: 0;
+    right: -3rem; */
+}
+.header .skills .ps {
+    width: 5rem;
+    height: 5rem;
+    background-image: url(images/hero-ps-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: rotation 2s infinite;
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+}
+.header .skills .fi {
+    width: 5rem;
+    height: 5rem;
+    background-image: url(images/hero-figma-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 10rem;
+    left: 49rem;
+    animation: verti 4s infinite ease-out;
+}
+@keyframes rotation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-6rem) rotate(-90deg);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+}
+@keyframes verti {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(4rem) rotate(-180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-360deg);
+    }
+}
+@media (min-width:500px) {
+    .header .socials {
+        display: none;
+    }
+    .header .skills {
+        display: none
+    };
+}
+@media (min-width: 530px) {
+    .header .avatar {
+        width: 80%;
+        align-self: center;
+    }
+    .header .actions {
+        text-align: center;
+    }
+    .header .actions a{
+        display: inline-block;
+        margin: 0 0.5em;
+    }
+    
+}
+
+@media (min-width: 700px) {
+    .header .avatar {
+        width: 60%;
+        align-self: center;
+    }
+    .header .actions {
+        text-align: center;
+    }
+    .header .actions a{
+        display: inline-block;
+        margin: 0 0.5em;
+    }
+}
+
+@media (min-width: 890px) {
+    .header {
+        position: relative;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .header h1 {
+        font-size: 3.5rem;
+        }
+    .header h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1em;
+    }
+    .header h3 {
+        margin-bottom: 3em;
+    }
+    .header h1,
+    .header h2,
+    .header h3,
+    .header p,
+    .header .actions{
+        width: 53%;
+    }
+    .header .avatar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 1rem;
+        margin: auto;
+        width: 45%;
+        height: 90%;
+        object-fit: contain;
+    }
+    .header .actions {
+        text-align: start;
+        margin-top: 3em;
+    } 
+    .header .actions a {
+        font-size: 1.1rem;
+    }
+}
+@media (min-width: 1170px) {
+    .header {
+        padding-bottom: 7rem;
+        padding-top: 7rem;
+        width: 1140px;
+        margin: auto;
+    }
+    .header h1 {
+        font-size: 4rem;
+    }
+    .header h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1em;
+    }
+    .header .actions a {
+        font-size: 1.3rem;
+    }
+    .header .socials {
+        display: inline-block;
+        right: -2em;
+        font-size: 0.7em;
+    }
+    .header .socials a {
+        vertical-align: middle;
+        line-height: 0.2em;
+    }
+    .header .skills {
+        display: inline-block;
+    }
+    .header .skills .fi {
+        left: 36rem;
+        top: 8rem
+    }
+    .vtext {
+        font-size: 10rem;
+    }
+}
+@media (min-width: 1500px) {
+    .header {
+        width: 1440px;
+        margin: auto;
+        padding-bottom: 8rem;
+        padding-top: 8rem;
+    }
+    .header h1 {
+        font-size: 4.3rem;
+    }
+    .header h2 {
+        font-size: 3.1rem;
+        margin-bottom: 1em;
+    }
+    .header h3 {
+        font-size: 1.3rem;
+    }
+    .header p {
+        font-size: 1.2rem;
+    }
+    .header .actions a {
+        font-size: 1.5rem;
+    }
+    .header .socials {
+        display: inline-block;
+        right: 0;
+        font-size: 1em;
+        line-height: 0.5em;
+    }
+    .header .skills .fi {
+        left: 49rem;
+        top: 10rem
+    }
+    .vtext {
+        font-size: 11rem;
+    }
+}
+@media (min-width:1500px) {
+    .container {
+        width: 1400px;
+        margin: auto;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+
+    }
+}
+
+
+.has-rating-4::before {
+    content:"\f005\f005\f005\f005"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+    right: 2.2rem;
+    color: var(--orange);
+}
+.has-rating-4::after {
+    content:"\f005"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--orange);
+}
+.testimonials .swiper .swiper-slide{
+    padding: 1rem 2rem;
+    background-image: linear-gradient(317deg,white 60%,transparent);
+    border-radius:5px;
+    box-shadow: 2px 2px 7px 1px var(--greyBA);
+
+    display: flex;
+    flex-direction: column;
+}
+.testimonials .swiper .swiper-slide p {
+    order: -1;
+}
+.testimonials .swiper .swiper-slide img {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+
+
