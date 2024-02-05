@@ -484,8 +484,70 @@ header p {
     right: 1rem;
     color: var(--orange);
 }
+.has-rating-3::before {
+    content:"\f005\f005\f005"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+    right: 3.3rem;
+    color: var(--orange);
+}
+.has-rating-3::after {
+    content:"\f005\f005"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--orange);
+}
+.has-rating-2::before {
+    content:"\f005\f005"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+    right: 4.4rem;
+    color: var(--orange);
+}
+.has-rating-2::after {
+    content:"\f005\f005\f005"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--orange);
+}
+.testimonials .container {
+    overflow-x: hidden;
+}
+
+.testimonials .container h1{
+    font-size: 3rem;
+    transform: translateY(4rem);
+
+}
+.testimonials .container h2{
+    transform: translateY(-6rem);
+    color: var(--pinkM);
+}
+.testimonials .container p {
+    color: var(--dark);
+} 
+.testimonials .container>p {
+    display: inline-block;
+    width: 50%;
+}
+.testimonials .swiper {
+    overflow: visible!important;
+    padding-top: 3rem;
+}
 .testimonials .swiper .swiper-slide{
     padding: 1rem 2rem;
+    box-sizing: border-box;
+    margin: 0 0.2rem;
     background-image: linear-gradient(317deg,white 60%,transparent);
     border-radius:5px;
     box-shadow: 2px 2px 7px 1px var(--greyBA);
@@ -493,13 +555,45 @@ header p {
     display: flex;
     flex-direction: column;
 }
+.testimonials .swiper .swiper-slide.swiper-slide-active {
+    margin: 0 0.90rem 0 0.2rem!important; 
+}
 .testimonials .swiper .swiper-slide p {
     order: -1;
+    margin-top: 5rem;
+    min-height: 8rem;
+}
+.testimonials .swiper .swiper-slide p::before {
+    content: "\f10e";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    display: inline-block;
+    font-size: 3.5rem;
+    transform: translateY(-4rem) translateX(-0.75rem);
+}
+.testimonials .swiper .swiper-slide h3 {
+    background-image: linear-gradient(90deg, rgb(221, 184, 245),white 70%);
+    margin-bottom: 0;
+}
+.testimonials .swiper .swiper-slide h4 {
+    margin: 0;
+    background-image: linear-gradient(90deg, rgb(221, 184, 245),white 70%);
 }
 .testimonials .swiper .swiper-slide img {
     position: absolute;
     bottom: 1rem;
     right: 2rem;
+}
+.testimonials .swiper .swiper-button-prev,
+.testimonials .swiper .swiper-button-next {
+    top: 0!important;
+    color: var(--dark);
+
+}
+
+.testimonials .swiper .swiper-button-prev {
+    left: auto!important;
+    right: 3rem;
 }
 
 
