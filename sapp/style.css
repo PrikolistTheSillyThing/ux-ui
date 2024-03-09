@@ -1,0 +1,15 @@
+body {
+  height: 2000px;
+}
+body header {
+  background: linear-gradient(-47deg, #8731E8, #4528DC);
+}
+body header .navbar .container {
+  color: white;
+}
+body header .navbar .container li {
+  padding: 0 0.5em;
+}
+body header .col-12 div {
+  margin: 2em 0;
+}/*# sourceMappingURL=style.css.map */
