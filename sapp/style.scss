@@ -1,8 +1,20 @@
+$h3-weight: 500;
+$h1-weight: 500;
+
+$purple: #8731E8;
+$blue: #4528DC;
+$white: #fff;
+
+ul {
+    list-style: none;
+}
+
 body {
-    height: 2000px;
+    font-family: "poppins", sans-serif;
+    height: 10000px;
 
     header {
-        background: linear-gradient(-47deg, #8731E8, #4528DC);
+        background: linear-gradient(-47deg, $purple, $blue);
 
         .navbar {
 
@@ -20,11 +32,137 @@ body {
         }
         
     }
+    .contacts .container .row .col:nth-child(1){
+        max-width: 50%;
+    }
+    .contacts .container .row .col:nth-child(2){
+        max-width: 35%;
+    }
 
+    .contacts h1{
+        font-size: 4.5rem;
+        margin: 0 0 2rem 0;
+        font-weight: $h1-weight;
+
+    }
+    .contacts p{
+        font-size: 1.1rem;
+        margin: 2.5rem 0;
+    }
+
+    .contacts h2 {
+        margin: 0 0 1rem 0;
+    }
+   
+    .contacts h3 {
+        font-weight: 300;
+        font-size: 1.3rem;
+   }
+   .contacts form div input {
+        height: 3rem;
+   }
+   .contacts form>a {
+        background-color: $purple;
+        color: $white;
+        padding: 1rem 6.5rem;
+   }
+   .contacts form>a:hover {
+        box-shadow: 4px 4px 12px grey;
+   }
+   .contacts .col:first-child div a{
+        border: 2px solid $purple;
+        padding: 1em 2em;
+        font-size: 1em;
+   }
+   .contacts .col:first-child div a:hover {
+        background-color: $purple;
+        color: $white;
+   }
+}
+main  {
+    .functionality {
+        margin: 10rem 0;
+        
+        .express {
+            max-width: 50%;
+            margin: 0 0 2em;
+            .premium {
+                transform: translateY(-5em);
+            }
+        }
     
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0 0 -2rem 0;
+        }   
+        h2 {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.75em;
+        } 
+        strong {
+            font-weight: 500;
+            color: $purple;
+        }
+        ul div {
+            transition: 0.3s;
+            
+        }
+        
+        ul div:hover {
+            transform: translateY(-0.8rem);
+    
+        }
 
+    }
 
+    .communication {  
+        img {
+            display: inline-block;
+            width: 25%;
+            align-self: flex-start;
+        }
+        .info {
+            
+
+            h1 {
+                font-size: 3.5rem;
+            }
+            p {
+                margin: 2rem 0;
+            }
+            ul {
+                margin: 2rem 0;
+                list-style: "\f14a";
+                font-weight: 400;
+                li {
+                    padding: 0.8rem;
+                }
+            } 
+            ul:last-child {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    color: $purple;
+                    width: 2em;
+                    height: 2em;
+                    text-align: center;
+                    line-height: 1.2em;
+                    margin: 0 0.5em;
+                    font-size: 2rem;
+                    box-shadow: 0px 0px 8px 1px rgb(197, 197, 197);
+                }
+            }
+       
+        }
+    } 
 }
 
+
+    
 
 
