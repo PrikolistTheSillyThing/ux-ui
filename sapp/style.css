@@ -6,11 +6,18 @@ body {
   font-family: "poppins", sans-serif;
   height: 10000px;
 }
+body a {
+  text-decoration: none;
+}
+body .swiper {
+  width: 600px;
+  height: 600px;
+}
 body header {
   background: linear-gradient(-47deg, #8731E8, #4528DC);
 }
 body header .navbar .container {
-  color: white;
+  color: #fff;
 }
 body header .navbar .container li {
   padding: 0 0.5em;
@@ -88,41 +95,257 @@ main .functionality strong {
 main .functionality ul div {
   transition: 0.3s;
 }
-main .functionality ul div:hover {
+main .functionality ul > div:hover {
   transform: translateY(-0.8rem);
 }
-main .communication img {
-  display: inline-block;
-  width: 25%;
+main .communication {
+  background-color: #f6f9fe;
+  padding: 4rem 0;
+}
+main .communication .container {
+  width: 85%;
+}
+main .communication .container .image {
   align-self: flex-start;
 }
-main .communication .info h1 {
+main .communication .container .image img {
+  display: inline-block;
+  width: 100%;
+}
+main .communication .container .info {
+  width: 100%;
+}
+main .communication .container .info h1 {
   font-size: 3.5rem;
+  font-weight: 600;
 }
-main .communication .info p {
+main .communication .container .info p {
   margin: 2rem 0;
 }
-main .communication .info ul {
+main .communication .container .info ul {
   margin: 2rem 0;
-  list-style: "\f14a";
+  list-style: none;
+  padding: 0;
   font-weight: 400;
 }
-main .communication .info ul li {
-  padding: 0.8rem;
+main .communication .container .info ul li {
+  padding: 1rem 0;
 }
-main .communication .info ul:last-child {
+main .communication .container .info ul li div span:first-child {
+  padding: 0;
+  max-width: 5%;
+  align-self: center;
+  text-align: center;
+  color: #8731E8;
+}
+main .communication .container .info ul:last-child {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-main .communication .info ul:last-child li {
+main .communication .container .info ul:last-child li {
   display: inline-block;
+  background-color: #fff;
   color: #8731E8;
   width: 2em;
   height: 2em;
   text-align: center;
-  line-height: 1.2em;
+  line-height: 1em;
   margin: 0 0.5em;
   font-size: 2rem;
   box-shadow: 0px 0px 8px 1px rgb(197, 197, 197);
+}
+main .manage .container {
+  width: 60%;
+  padding: 5rem 0;
+}
+main .manage .container h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+main .manage .container ul {
+  margin: 3rem 0;
+  padding: 0;
+}
+main .manage .container ul li {
+  padding: 1rem 0;
+}
+main .manage .container ul li div span:first-child {
+  padding: 0;
+  max-width: 10%;
+  display: inline-block;
+  align-self: center;
+  text-align: center;
+  color: #8731E8;
+  background-color: #fff;
+  height: 3.5rem;
+  font-size: 1.5rem;
+  line-height: 2.4em;
+  box-shadow: 0px 0px 0px rgb(197, 197, 197);
+}
+main .manage .container img {
+  display: block;
+  margin: auto;
+}
+main .manage .container a {
+  background: linear-gradient(-47deg, #8731E8, #4528DC);
+  color: #fff;
+  padding: 1em 2em;
+}
+main .manage .container a:hover {
+  box-shadow: 0px 2px 4px rgb(197, 197, 197);
+}
+main .works {
+  background: linear-gradient(-47deg, #8731E8, #4528DC);
+  margin: 3rem 0;
+  padding: 2rem 0;
+  color: #fff;
+}
+main .works .container {
+  width: 55%;
+}
+main .works .container h1 {
+  font-weight: 600;
+  font-size: 3.5rem;
+  margin: 3rem 0 2rem 0;
+}
+main .works .container p {
+  margin: 3rem 0;
+}
+main .works .container .row {
+  margin: 0 0 3rem 0;
+}
+main .works .container .row p {
+  margin: 1rem;
+}
+main .works .container .row h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main .simple {
+  padding: 3.5rem 0;
+}
+main .simple .container h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 0 0 2rem 0;
+}
+main .simple .container p {
+  width: 50%;
+  display: block;
+  margin: 0 auto 3rem auto;
+}
+main .simple .swiper {
+  width: 80%;
+}
+main .simple img {
+  width: 100%;
+}
+main .testimonials .swiper {
+  width: 60%;
+  height: 100%;
+  margin: 4rem auto;
+}
+main .testimonials .swiper ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem 1rem 0;
+}
+main .testimonials .swiper ul li img {
+  order: -1;
+  width: 15%;
+  margin: 1rem auto;
+  border-radius: 50%;
+}
+main .testimonials .swiper ul li h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main .testimonials .swiper ul li h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+main .subscriptions {
+  background-color: #f6f9fe;
+  padding: 5rem 0;
+}
+main .subscriptions h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+main .subscriptions p {
+  width: 60%;
+  margin: 2rem auto 4rem auto;
+}
+main .subscriptions .row {
+  width: 60%;
+  margin: auto;
+}
+main .subscriptions ul {
+  padding: 0;
+  width: 80%;
+  margin: 2rem auto;
+}
+main .subscriptions ul li {
+  padding: 1rem 0;
+  border-top: 1px solid rgb(197, 197, 197);
+}
+main .subscriptions ul li:last-child {
+  border-bottom: 1px solid rgb(197, 197, 197);
+}
+main .subscriptions .fs-1 {
+  color: #8731E8;
+  margin: 2rem 0;
+}
+main .subscriptions h3 {
+  margin: 1rem 0;
+}
+main .subscriptions h4 {
+  color: #8731E8;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+main .subscriptions h4 strong {
+  font-size: 3rem;
+}
+main .subscriptions .col a {
+  text-decoration: none;
+  background: linear-gradient(-47deg, #8731E8, #4528DC);
+  color: white;
+  padding: 1rem 3rem;
+  transform: translateY(2rem);
+}
+main .subscriptions .col a:hover {
+  box-shadow: 0px 3px 4px rgb(197, 197, 197);
+}
+main .subscriptions .container p:last-child {
+  margin: 4rem auto 0 auto;
+}
+main .subscriptions .container p:last-child a {
+  transition: 0.3s;
+  color: #212529;
+}
+main .subscriptions .container p:last-child a:hover {
+  color: #8731E8;
+}
+main .stay-tuned {
+  margin: 5rem 0;
+}
+main .stay-tuned h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+main .stay-tuned .container > p {
+  width: 60%;
+  margin: 2rem auto 4rem auto;
+}
+main .stay-tuned ul {
+  padding: 0;
+}
+main .stay-tuned ul .row span:first-child {
+  display: block;
+  max-width: 7%;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
 }/*# sourceMappingURL=style.css.map */

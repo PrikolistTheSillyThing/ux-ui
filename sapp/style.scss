@@ -1,9 +1,12 @@
 $h3-weight: 500;
 $h1-weight: 500;
 
+$grey: rgb(197, 197, 197);
 $purple: #8731E8;
 $blue: #4528DC;
 $white: #fff;
+$primary: #f6f9fe;
+$text: #212529;
 
 ul {
     list-style: none;
@@ -13,13 +16,22 @@ body {
     font-family: "poppins", sans-serif;
     height: 10000px;
 
+    a {
+        text-decoration: none;
+    }
+
+    .swiper {
+        width: 600px;
+        height: 600px;
+      }
+
     header {
         background: linear-gradient(-47deg, $purple, $blue);
 
         .navbar {
 
             .container {
-                color: white;
+                color: $white;
                 
                 li {
                     padding: 0 0.5em;
@@ -30,8 +42,11 @@ body {
         .col-12 div{
             margin: 2em 0;
         }
-        
     }
+    .contacts {
+
+    }
+
     .contacts .container .row .col:nth-child(1){
         max-width: 50%;
     }
@@ -110,7 +125,7 @@ main  {
             
         }
         
-        ul div:hover {
+        ul>div:hover {
             transform: translateY(-0.8rem);
     
         }
@@ -118,48 +133,324 @@ main  {
     }
 
     .communication {  
-        img {
-            display: inline-block;
-            width: 25%;
-            align-self: flex-start;
-        }
-        .info {
-            
+        background-color: $primary;
+        padding: 4rem 0;
+        .container {
 
-            h1 {
-                font-size: 3.5rem;
+                width: 85%;
+            .image {
+                align-self: flex-start;
+                img {
+                    display: inline-block;
+                    width: 100%;
+                }
             }
-            p {
-                margin: 2rem 0;
+            
+            .info {
+
+                width: 100%;
+
+                h1 {
+                    font-size: 3.5rem;
+                    font-weight: 600;
+                }
+                p {
+                    margin: 2rem 0;
+                }
+                ul {
+                    margin: 2rem 0;
+                    list-style: none;
+                    padding: 0;
+                    font-weight: 400;
+                    li {
+                        padding: 1rem 0;
+
+                        div {
+                            span:first-child {
+                                padding: 0;
+                                max-width: 5%;
+                                align-self: center;
+                                text-align: center;
+                                color: $purple;
+                            }
+                        }
+                    }
+                } 
+                ul:last-child {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+    
+                    li {
+                        display: inline-block;
+                        background-color: #fff;
+                        color: $purple;
+                        width: 2em;
+                        height: 2em;
+                        text-align: center;
+                        line-height: 1em;
+                        margin: 0 0.5em;
+                        font-size: 2rem;
+                        box-shadow: 0px 0px 8px 1px $grey;
+                    }
+                }
+           
+            }
+        }
+        
+    } 
+    .manage {
+        .container {
+            width: 60%;
+            padding: 5rem 0;
+            h1 {
+                font-weight: 600;
+                font-size: 3rem;
             }
             ul {
-                margin: 2rem 0;
-                list-style: "\f14a";
-                font-weight: 400;
-                li {
-                    padding: 0.8rem;
-                }
-            } 
-            ul:last-child {
-                list-style: none;
-                margin: 0;
+                margin: 3rem 0;
                 padding: 0;
 
                 li {
-                    display: inline-block;
-                    color: $purple;
-                    width: 2em;
-                    height: 2em;
-                    text-align: center;
-                    line-height: 1.2em;
-                    margin: 0 0.5em;
-                    font-size: 2rem;
-                    box-shadow: 0px 0px 8px 1px rgb(197, 197, 197);
+
+                    padding: 1rem 0;
+
+                    div {
+                        span:first-child {
+                            padding: 0;
+                            max-width: 10%;
+                            display: inline-block;
+                            align-self: center;
+                            text-align: center;
+                            color: $purple;
+                            background-color: #fff;
+                            height: 3.5rem;
+                            font-size: 1.5rem;
+                            line-height: 2.4em;
+                            box-shadow: 0px 0px 0px $grey;
+                        }
+                    }
+
+                }
+
+            }
+
+            img {
+                display: block;
+                margin: auto;
+            }
+            a {
+                background: linear-gradient(-47deg, $purple, $blue);
+                color: $white;
+                padding: 1em 2em;
+                &:hover {
+                    box-shadow: 0px 2px 4px $grey;
                 }
             }
-       
+            
         }
-    } 
+    }
+
+    .works {
+        background: linear-gradient(-47deg, $purple, $blue);
+        margin: 3rem 0;
+        padding: 2rem 0;
+        color: $white;
+
+        .container {
+            width: 55%;
+            h1 {
+                font-weight: 600;
+                font-size: 3.5rem;
+                margin: 3rem 0 2rem 0;
+            }
+            p {
+                margin: 3rem 0;
+            }
+            .row  {
+                p {
+                    margin: 1rem;
+                }
+                margin: 0 0 3rem 0;
+
+                
+                h2 {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+    .simple {
+
+        padding: 3.5rem 0 ;
+
+        .container {
+
+            h1 {
+                font-weight: 600;
+                font-size: 3rem;
+                margin: 0 0 2rem 0;
+            }
+
+            p {
+                width: 50%;
+                display: block;
+                margin: 0 auto 3rem auto;
+
+            }
+
+        }
+
+        .swiper {
+            width: 80%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    .testimonials {
+        .swiper {
+            width: 60%;
+            height: 100%;
+            margin: 4rem auto;
+
+            ul {
+
+                li {
+
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 4rem 1rem 0;
+
+                    img {
+                        order: -1;
+                        width: 15%;
+                        margin: 1rem auto;
+                        border-radius: 50%;
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                    h4 {
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    .subscriptions {
+        background-color: $primary;
+        padding: 5rem 0;
+
+        h1 {
+            font-weight: 600;
+            font-size: 3rem;
+        }
+
+        p   {
+            width: 60%;
+            margin: 2rem auto 4rem auto;
+        }
+
+
+        .row {
+            width: 60%;
+            margin: auto;
+
+
+        }
+
+        ul{
+            padding: 0;
+            width: 80%;
+            margin: 2rem auto;
+
+            li {
+                padding: 1rem 0;
+                border-top: 1px solid $grey;
+            }
+            li:last-child {
+                border-bottom: 1px solid $grey;
+            }
+
+        }
+
+        .fs-1 {
+            color: $purple;
+            margin: 2rem 0;
+        }
+        h3 {
+            margin: 1rem 0;
+        }
+        h4 {
+            color: $purple;
+            font-size: 1.5rem;
+            font-weight: 600;
+            strong {
+               font-size: 3rem;
+            }
+
+        }
+        .col a {
+            text-decoration: none;
+            background: linear-gradient(-47deg, $purple, $blue);
+            color: white;
+            padding: 1rem 3rem;
+            transform: translateY(2rem);
+
+            &:hover {
+                box-shadow: 0px 3px 4px $grey;
+            }
+
+
+        }
+
+        .container p:last-child {
+            margin: 4rem auto 0 auto;
+            a {
+                transition: 0.3s;
+                color: $text;
+            }
+            a:hover {
+                color: $purple;
+            }
+        }
+    }
+
+
+    .stay-tuned {
+        margin: 5rem 0;
+
+        h1 {
+            font-weight: 600;
+            font-size: 3rem;
+        }
+        .container>p {
+            width: 60%;
+            margin: 2rem auto 4rem auto;
+        }
+        
+        ul {
+            padding: 0;
+
+            .row span:first-child {
+                display: block;
+                max-width: 7%;
+                height: 3rem;
+                text-align: center;
+                line-height: 3rem;
+            }
+        }
+    }
 }
 
 
